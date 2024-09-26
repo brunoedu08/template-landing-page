@@ -10,4 +10,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'template-landing-page';
+
+  ctaAction() {
+    // Ação ao clicar no botão CTA
+    console.log('CTA clicado!');
+  }
 }
