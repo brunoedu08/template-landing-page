@@ -7,12 +7,66 @@
     background: #f5f5f5;
     text-align: center;
     padding: 50px 20px;
-  }
+    background: #E2B9BC;
+    position: relative; /* Para que possamos usar um pseudo-elemento */
+    z-index: 1; /* Para que o conteúdo fique acima do fundo */
+}
 
-  .services, .testimonials, .faq, .cta-reinforcement {
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(245, 245, 245, 0.7); /* Uma cor semitransparente para suavizar o fundo */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+}
+
+  .services, .faq {
     padding: 40px 20px;
     text-align: center;
   }
+
+  .testimonials{
+    background: #f5f5f5;
+    text-align: center;
+    padding: 50px 20px;
+    background: #C09EA0;
+    position: relative; /* Para que possamos usar um pseudo-elemento */
+    z-index: 1; /* Para que o conteúdo fique acima do fundo */
+  }
+
+  .testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(245, 245, 245, 0.7); /* Uma cor semitransparente para suavizar o fundo */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+}
+
+.cta-reinforcement{
+  background: #f5f5f5;
+    text-align: center;
+    padding: 50px 20px;
+    background: #EB60C3;
+    position: relative; /* Para que possamos usar um pseudo-elemento */
+    z-index: 1; /* Para que o conteúdo fique acima do fundo */
+}
+
+.cta-reinforcement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 245, 245, 0.7); /* Uma cor semitransparente para suavizar o fundo */
+  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+}
 
   .service-list {
     display: flex;
@@ -24,13 +78,14 @@
   }
 
   .cta-button {
-    background: #007bff;
+    background: #7C6667;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 20px;
   }
 
   .cta-button:hover {
-    background: #0056b3;
+    background: #7C6667;
   }
